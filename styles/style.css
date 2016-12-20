@@ -8,7 +8,6 @@ Last change:	24/02/2013
 
 body {
 	background-color: #F0F0F0;
-	background-image: url(img\bg.jpg);
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -114,7 +113,6 @@ hr {
 
 .header {
     background-color: #f0f0f0;
-    background-image: url(img\bg-top.jpg);
 	border-bottom: 1px solid #dddddd;
 	box-shadow:  0 0 3px rgba(190, 190, 190, 0.75);
 	top: 0;
