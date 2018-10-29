@@ -1,222 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <title>Luiz Paulo - Currículo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Styles -->
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="./styles/font-awesome.css">
-    <link href="./styles/main.css" rel="stylesheet">
-    <link href="./styles/bootstrap-responsive.css" rel="stylesheet">
-  <link href="./styles/style.css" rel="stylesheet">
-  <!-- Google fonts -->
-  <link href='./styles/OpenSans.css' rel='stylesheet' type='text/css'>
-  <link href='./styles/SansPro.css' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>
-      <script src="./js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Luiz Paulo - Currículo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body>
-  <!-- Starting header -->
-  <div class="header">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span6">
-      <img src="img/avatar.jpg" title="Avatar" alt="My Avatar" class="avatar">
-      <h4>Luiz Paulo Lindenmaier</h4>
-      <p>Desenvolvedor .Net & Node JS</p>
-      <p class="muted"><a href="http://github.com/lindennerd">Meu perfil no GitHub</a></p>
-      <div class="clearfix"></div>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="./styles/main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content row">
+          <div class="col s2 l2 m2">
+            <img src="img/avatar.jpg" title="Avatar" alt="Minha Foto" class="circle photo">
+          </div>
+          <div class="col l3 m4 s12">
+            <ul class="infos">
+              <li><i class="material-icons">person</i> Luiz Paulo Lindenmaier da Silva</li>
+              <li><i class="material-icons">code</i>Desenvolvedor Web .Net & Node JS</li>
+              <li><i class="material-icons">share</i><a href="http://github.com/lindennerd">Meu perfil no Github</a></li>
+            </ul>
+          </div>
+          <div class="col l3 m4 s12">
+            <ul>
+              <li><i class="material-icons">home</i>Alvorada-RS</li>
+              <li><i class="material-icons">mail</i><a href="mailto:lindennerd@gmail.com">lindennerd@gmail.com</a></li>
+              <li><i class="material-icons">phone</i>55 (51) 98510-6926</li>
+            </ul>
+          </div>
+          <div class="col l3 m4 s12">
+            <ul>
+              <li>
+                <i class="material-icons">phone</i>
+                Por Telefone todos os dias de preferência fora de horário comercial
+              </li>
+              <li>
+                <i class="material-icons">email</i>
+                Por Email sempre ativo
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="span6">
-      <ul>
-        <li><i class="icon-home"></i> Alvorada - RS, Brasil</li>
-        <li><i class="icon-envelope"></i> lindennerd@gmail.com</li>
-        <li><i class="icon-user"></i> 55 (51) 98510-6926</li>
-      </ul>
-      </div>
-
     </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Experiência</div>
+          <ul class="collection with-header">
+            <li class="collection-header">Entel Engenharia (2011)</li>
+            <li class="collection-item"><strong>Suporte Técnico</strong> atuando na manutenção de redes e micros</li>
+            <li class="collection-item"><strong> Assistente Técnico de Telecomunicações</strong> desenvolvendo relatórios
+              PDI de equipamentos DSLAM</li>
+          </ul>
+          <ul class="collection with-header">
+            <li class="collection-header">Power Imaging (desde 2011)</li>
+            <li class="collection-item"><strong>Desenvolvimento .Net</strong> criação e manutenção de softwares desktop e
+              web na plataforma Microsoft .Net </li>
+            <li class="collection-item"><strong>SQL Server & Mongo DB</strong> atuando tanto na criação e manutenção de
+              bases, como na elaboração de consultas, utilizando algumas técnicas de BI</li>
+            <li class="collection-item"><strong>JavaScript</strong> Desenvolvimento de aplicações web e desktop
+              utilizando a plataforma Node JS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="skills">
+      <div class="col s3">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/Web-Development.png" alt="" >
+          </div>
+          <div class="card-content">
+            <p><strong>FRONTEND </strong>Ampla experiência com Jquery e Javascript em geral, HTML5, CSS3 e Twitter
+              Bootstrap. Recentemente bem empolgado com os frameworks React JS e Angular 2.</p>
+            <p><strong>BACKEND </strong>Experiência no desenvolvimento com .Net framework, Python para a Web e Node JS</p>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="card-title">Localização</div>
+          <iframe height="200" frameborder="0" style="border:0; width: 100%" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJheZn5WJ1GZURTuODikn2DXE&amp;key=AIzaSyBaaMNi1f6_OoMLc109AjGwZ1Amkb1Xli4"
+            allowfullscreen=""></iframe>
+        </div>
+      </div>
     </div>
   </div>
-  
-  <!-- Starting main block -->
-    <div class="container-fluid">
-      <div class="row-fluid">
-      <!--  Starting left block -->
-        <div class="span3 left-column">
-      <div class="left-block">
-        <h4>Disponibilidade</h4>
-        <hr>
-            <div class="well">
-              <p><strong>Por Telefone</strong> todos os dias de preferência fora de horário comercial</p>
-              <p><strong>Por Email</strong> sempre ativo</p>
+</body>
 
-            </div>
-
-
-        <div class="clearfix"></div>
-      </div>
-      <div class="left-block">
-      <h4>Localização</h4>
-      <hr>
-      <p>
-        <!-- Google Maps widget. -->
-<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJheZn5WJ1GZURTuODikn2DXE&key=AIzaSyBaaMNi1f6_OoMLc109AjGwZ1Amkb1Xli4" allowfullscreen></iframe>     </p>
-      </div>
-    </div>
-    <!-- Starting right block -->
-    <div class="span9 right-column">
-
-      <h3><i class="icon-group"></i> Trabalhos</h3>
-      <div class="row-fluid">
-      <div class="span6">
-        <div class="right-block">
-          <h4>Entel Engenharia (2011)</h4>
-        <p>
-          <strong>Suporte Técnico </strong> atuando na manutenção de redes e micros 
-        </p>
-        <p>
-          <strong>Assistente Técnico de Telecomunicações </strong> desenvolvendo relatórios PDI de equipamentos DSLAM 
-        </p>
-        <div class="num">1</div>
-        </div>
-      </div>
-      <div class="span6">
-        <div class="right-block">
-          <h4>Power Imaging (atual desde 2011)</h4>
-        <p>
-          <strong>Desenvolvimento .Net </strong>criação e manutenção de softwares desktop e web na tecnologia MS .Net e outras, tais como Node JS e Python</p><p>
-          <strong>SQL Server </strong>atuando tanto na criação e manutenção de bases, como na elaboração de consultas, utilizando algumas técnicas de BI  
-        </p>
-        <div class="num">2</div>
-        </div>
-      </div>
-      </div>
-      <h3><i class="icon-trophy"></i> Habilidades Profissionais</h3>
-      <div class="row-fluid">
-      <div class="span3">
-        <div class="right-block">
-          <h4>Web Development</h4>
-        <p>
-          <strong>FRONTEND</strong>
-          Ampla experiência com Jquery e Javascript em geral, HTML5, CSS3 e Twitter Bootstrap. Recentemente bem empolgado com os frameworks React JS e Angular 2.
-        </p>
-        <p>
-          <strong>BACKEND</strong>
-          Experiência no desenvolvimento com .Net framework, Python para a Web e Node JS
-        </p>
-        <div class="num">1</div>
-        </div>
-      </div>
-      <div class="span3">
-        <div class="right-block">
-          <h4>Banco de Dados</h4>
-        <p>
-          <strong>SQL</strong>
-          Experiência com MS SQL Server 2008 e MS SQL Server 2012, utilizando a linguagem T-SQL na construção de consultas avançadas.
-        </p>       
-         <p>
-          <strong>No-SQL</strong>
-          Experiência na utilização de MongoDB e Redis em projetos atualmente em produção.
-        </p>
-        <div class="num">2</div>
-        </div>
-      </div>
-      <div class="span3">
-        <div class="right-block">
-          <h4>Visão Profissional</h4>
-        <p>
-          Acredito fortemente no esforço e no trabalho individual como forma de <strong>crescimento profissional</strong>, e na cooperação e comunicação como ingredientes para gerar <strong>valor</strong> e atingir <strong>metas</strong>
-        </p>
-        <div class="num">3</div>
-        </div>
-      </div>
-      <div class="span3">
-        <div class="right-block">
-          <h4>Idiomas</h4>
-        <p>
-          <strong>Inglês</strong>
-          Autodidata na língua inglesa, possuo o conhecimento necessário para efetuar satisfatóriamente tanto a leitura e escrita no idioma, quanto conversação com pessoas anglófonas<br />
-          <strong>Chinês</strong>
-          Atualmente, estou estudando chinês e mandarim online na escola Pula Muralha
-        </p>
-        <div class="num">4</div>
-        </div>
-      </div>
-      </div>
-
-            <h3> Graduação</h3>
-            <div class="row-fluid">
-            <div class="span4">
-              <div class="right-block">
-                <h4>Ensino Superior</h4>
-              <p>
-                Cursou <strong> Sistemas de Informação </strong>na Faculdade <a href="http://www.faculdadedombosco.edu.br">Dom Bosco de Porto Alegre</a>, com bolsa integral pelo programa PROUNI. Atualmente interrompido por motivos pessoais.
-              </p>
-              <div class="num">1</div>
-              </div>
-            </div>
-            <div class="span4">
-              <div class="right-block">
-                <h4>Ensino Médio e Fundamental</h4>
-              <p>
-                <strong>Ensino Médio </strong> concluído em 2011 na EEEM Vale Verde - Alvorada RS</p>
-                <p>
-                <strong>Ensino Fundamental </strong> concluído em 2008 na EEEM Vale Verde - Alvorada RS
-              </p>
-              <div class="num">2</div>
-              </div>
-            </div>
-            <div class="span4">
-              <div class="right-block">
-                <h4>Cursos e Especializações</h4>
-              <p>
-      <strong>Profissionalizante </strong> em informática pela instituição CEDASPY        </p>
-      <p>
-      <strong>Desenvolvimento Web </strong> utilizando o framework Django pela instituição PyCursos
-      </p>
-      <p>
-        <strong>Node.js: Inovando com Javascript no backend</strong>
-        Utilização de Javascript como linguagem de back-end e utilização do ambiente NPM pela instituição Allura
-      </p>
-      <p>
-        <strong>Node.js e HTTP: desenvolvendo uma API seguindo o estilo REST</strong>
-        Utilização de Node JS para o desenvolvimento de API's REST
-      </p>
-      <p>
-        <strong>MongoDB: Uma alternativa aos bancos relacionais tradicionais</strong>
-        Utilização de Mongo DB como banco de dados de aplicações
-      </p>
-              <div class="num">3</div>
-              </div>
-            </div>
-            </div>
-
-    </div>
-    </div>
-  </div>
-
-  
-  <!-- Starting footer -->
-  <div class="footer">
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span12">
-      Copyright &copy; 2018 Luiz Paulo Lindenmaier - All rights reserved.
-      </div>
-    </div>
-    </div>
-  </div>
-
-    <!-- Javascript -->
-    <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/custom.js"></script>
-
-  </body>
 </html>
