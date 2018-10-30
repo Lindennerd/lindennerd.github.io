@@ -1,0 +1,23 @@
+.photo{
+    display: none;
+}
+
+.card-image {
+    display: none;
+}
+
+.card {
+    break-inside: avoid;
+}
+
+.cv {
+    display: none;
+}
+
+#localization {
+    display: none;  
+}
+
+.area-title {
+    display: block;
+}

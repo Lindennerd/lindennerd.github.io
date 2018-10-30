@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="./styles/main.css" rel="stylesheet">
+  <link href="./styles/print.css" rel="stylesheet" media="print">
+
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
 
@@ -19,10 +21,10 @@
 
 <body>
   <div class="row">
-    <div class="col s12">
+    <div class="col s12" id="info">
       <div class="card">
         <div class="card-content row">
-          <div class="col s2 l2 m2">
+          <div class="col s2 l2 m4">
             <img src="img/avatar.jpg" title="Avatar" alt="Minha Foto" class="circle photo">
           </div>
           <div class="col l3 m4 s12">
@@ -55,34 +57,48 @@
       </div>
     </div>
 
-    <div class="col s12">
-      <div class="card">
-        <div class="card-content">
-          <div class="card-title">Experiência</div>
-          <ul class="collection with-header">
-            <li class="collection-header">Entel Engenharia (2011)</li>
-            <li class="collection-item"><strong>Suporte Técnico</strong> atuando na manutenção de redes e micros</li>
-            <li class="collection-item"><strong> Assistente Técnico de Telecomunicações</strong> desenvolvendo relatórios
-              PDI de equipamentos DSLAM</li>
-          </ul>
-          <ul class="collection with-header">
-            <li class="collection-header">Power Imaging (desde 2011)</li>
-            <li class="collection-item"><strong>Desenvolvimento .Net</strong> criação e manutenção de softwares desktop e
-              web na plataforma Microsoft .Net </li>
-            <li class="collection-item"><strong>SQL Server & Mongo DB</strong> atuando tanto na criação e manutenção de
-              bases, como na elaboração de consultas, utilizando algumas técnicas de BI</li>
-            <li class="collection-item"><strong>JavaScript</strong> Desenvolvimento de aplicações web e desktop
-              utilizando a plataforma Node JS</li>
-          </ul>
+    <div class="row" id="experience">
+      <div class="col s12 area-title">
+        <h5 class="text-center">Experiência</h5>
+        <hr>
+      </div>
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <ul class="collection with-header">
+              <li class="collection-header">Entel Engenharia (2011)</li>
+              <li class="collection-item"><strong>Suporte Técnico</strong> atuando na manutenção de redes e micros</li>
+              <li class="collection-item"><strong> Assistente Técnico de Telecomunicações</strong> desenvolvendo
+                relatórios
+                PDI de equipamentos DSLAM</li>
+            </ul>
+            <ul class="collection with-header">
+              <li class="collection-header">Power Imaging (desde 2011)</li>
+              <li class="collection-item"><strong>Desenvolvimento .Net</strong> criação e manutenção de softwares
+                desktop
+                e
+                web na plataforma Microsoft .Net </li>
+              <li class="collection-item"><strong>SQL Server & Mongo DB</strong> atuando tanto na criação e manutenção
+                de
+                bases, como na elaboração de consultas, utilizando algumas técnicas de BI</li>
+              <li class="collection-item"><strong>JavaScript</strong> Desenvolvimento de aplicações web e desktop
+                utilizando a plataforma Node JS</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="skills">
-      <div class="col s3">
+
+    <div id="skills" class="row">
+      <div class="col s12 area-title">
+        <h5 class="text-center">Habilidades</h5>
+        <hr>
+      </div>
+      <div class="col m6 l3 s12">
         <div class="card">
           <div class="card-image">
-            <img src="img/Web-Development.png" alt="" >
+            <img src="img/Web-Development.png" alt="">
           </div>
           <div class="card-content">
             <p><strong>FRONTEND </strong>Ampla experiência com Jquery e Javascript em geral, HTML5, CSS3 e Twitter
@@ -91,18 +107,126 @@
           </div>
         </div>
       </div>
-     
+
+      <div class="col m6 l3 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/database.png" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              <strong>SQL</strong>
+              Experiência com MS SQL Server 2008 e MS SQL Server 2012, utilizando a linguagem T-SQL na construção de
+              consultas avançadas.
+            </p>
+            <p>
+              <strong>No-SQL</strong>
+              Experiência na utilização de MongoDB e Redis em projetos atualmente em produção.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m6 l3 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/profissional.png" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              Acredito fortemente no esforço e no trabalho individual como forma de <strong>crescimento profissional</strong>,
+              e na cooperação e comunicação como ingredientes para gerar <strong>valor</strong> e atingir <strong>metas</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m6 l3 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/english.webp" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              Autodidata na língua inglesa, possuo o conhecimento necessário para efetuar satisfatóriamente tanto a
+              leitura e escrita no idioma, quanto conversação com pessoas anglófonas
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="col s12">
+    <div id="schoolarship">
+      <div class="col s12 area-title">
+        <h5 class="text-center">Formação</h5>
+        <hr>
+      </div>
+      <div class="col m6 l4 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/graduation.png" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              Cursou <strong> Sistemas de Informação </strong>na Faculdade <a href="http://www.faculdadedombosco.edu.br">Dom
+                Bosco de Porto Alegre</a>, com bolsa integral pelo programa PROUNI. Atualmente interrompido por motivos
+              pessoais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m6 l4 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/escola.png" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              <strong>Ensino Médio </strong> concluído em 2011 na EEEM Vale Verde - Alvorada RS</p>
+            <p>
+              <strong>Ensino Fundamental </strong> concluído em 2008 na EEEM Vale Verde - Alvorada RS
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m6 l4 s12">
+        <div class="card">
+          <div class="card-image">
+            <img src="img/specialization.jpg" alt="">
+          </div>
+          <div class="card-content">
+            <p>
+              <strong>Profissionalizante </strong> em informática pela instituição CEDASPY </p>
+            <p>
+              <strong>Desenvolvimento Web </strong> Diversos cursos na plataforma Allura na área (Node JS, React JS,
+              MongoDB)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col s12" id="localization">
       <div class="card">
         <div class="card-content">
-          <div class="card-title">Localização</div>
+          <div class="card-title">Endereço de Residência</div>
           <iframe height="200" frameborder="0" style="border:0; width: 100%" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJheZn5WJ1GZURTuODikn2DXE&amp;key=AIzaSyBaaMNi1f6_OoMLc109AjGwZ1Amkb1Xli4"
             allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
+
+    <div class="fixed-action-btn cv">
+      <a class="btn-floating btn-large red" id="generatePDF" onclick="print()">
+        <i class="large material-icons">picture_as_pdf</i>
+      </a>
+    </div>
+
   </div>
 </body>
 

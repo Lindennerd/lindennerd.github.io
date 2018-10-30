@@ -1,11 +1,9 @@
 body {
   background-color: #eee;
-  padding: 0.5em 1em 0em 1em;
 }
 
 .photo {
-  height: 5em;
-  margin-top: 0.5em;
+  height: 10em;
 }
 
 .infos li:first-child {
@@ -19,3 +17,30 @@ li i.material-icons {
   padding-right: 0.5em;
 }
 
+.btn-floating.cv {
+  height: 86px;
+  width: 86px;
+}
+
+.cv > .material-icons {
+  line-height: 86px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.area-title {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .btn-floating.cv {
+    height: 56px;
+    width: 56px;
+  }
+  
+  .cv > .material-icons {
+    line-height: 56px !important;
+  } 
+}
