@@ -6,7 +6,7 @@ import { client } from "../graphql";
 import { gql } from "@apollo/client";
 
 const Home: NextPage = ({ name }) => {
-  return <div>{name}</div>;
+  return <div className="p-2 rounded-full bg-green-600">{name}</div>;
 };
 
 export async function getStaticProps() {
