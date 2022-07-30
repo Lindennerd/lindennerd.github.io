@@ -1,5 +1,0 @@
-(function () {
-    // $('#generatePDF').click(function(){
-
-    // })
-})();
