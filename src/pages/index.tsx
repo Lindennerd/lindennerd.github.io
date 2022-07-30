@@ -5,7 +5,7 @@ import Image from "next/image";
 import { client } from "../graphql";
 import { gql } from "@apollo/client";
 
-const Home: NextPage = ({ name }) => {
+const Home = ({ name }: { name: string }) => {
   return <div className="p-2 rounded-full bg-green-600">{name}</div>;
 };
 
