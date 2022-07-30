@@ -1,30 +1,34 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
-import { client } from "../graphql";
-import { gql } from "@apollo/client";
+import { client } from "@/graphql";
+import Navbar from "@/components/Navbar";
+import {
+  GithubUserDataDocument,
+  GithubUserDataQuery,
+} from "@/graphql/graphql-operations";
 
-const Home = ({ name }: { name: string }) => {
-  return <div className="p-2 rounded-full bg-green-600">{name}</div>;
+const Home = ({ user }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  return (
+    <>
+      <main>
+        <Navbar>
+          <div>{user?.name}</div>
+        </Navbar>
+      </main>
+    </>
+  );
 };
 
-export async function getStaticProps() {
-  const data = await client.query({
-    query: gql`
-      query {
-        user(login: "lindennerd") {
-          name
-        }
-      }
-    `,
+export const getStaticProps: GetStaticProps<GithubUserDataQuery> = async () => {
+  const { data } = await client.query<GithubUserDataQuery>({
+    query: GithubUserDataDocument,
   });
 
   return {
-    props: {
-      name: data.data.user.name,
-    },
+    props: { user: data.user },
   };
-}
+};
 
 export default Home;

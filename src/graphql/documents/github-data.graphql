@@ -1,0 +1,26 @@
+query GithubUserData {
+  user(login: "lindennerd") {
+    avatarUrl(size: 10)
+    bio
+    company
+    email
+    name
+    login
+    location
+    isHireable
+    pinnedItems(first: 10) {
+      edges {
+        node {
+          ... on Repository {
+            id
+            name
+            description
+            homepageUrl
+            url
+            updatedAt
+          }
+        }
+      }
+    }
+  }
+}
