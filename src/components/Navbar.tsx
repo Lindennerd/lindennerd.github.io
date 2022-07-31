@@ -1,8 +1,8 @@
 export default function Navbar({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="p-1 bg-white fixed top-0 w-full h-16 text-center
-    border-b shadow-lg flex items-center justify-between"
+      className=" bg-white shadow-md fixed top-0 w-full h-14 text-center px-2 z-10
+    flex items-center justify-start dark:bg-gray-600 md:justify-between"
     >
       {children}
     </div>
