@@ -1,14 +1,16 @@
 export default function Name({
   name,
-  nickname,
+  bio,
 }: {
   name: string | null | undefined;
-  nickname: string | null | undefined;
+  bio: string | null | undefined;
 }) {
   return (
-    <div className="text-xl font-bold  p-2">
-      {name}
-      {nickname && <span className="text-gray-600"> (@{nickname})</span>}
+    <div className="p-2">
+      <div className="text-xl font-bold">{name}</div>
+      <div className="font-mono text-slate-600 dark:text-slate-200 hidden md:block">
+        {bio}
+      </div>
     </div>
   );
 }
