@@ -1,0 +1,18 @@
+{
+    "ptBr": [{
+        "presentation": {
+            "firstLine": "Comecei a desenvolver aos 15 anos de idade e imediatamente me apaixonei  pela atividade. Hoje, atuo a mais de 10 anos na área, e tive a  oportunidade de utilizar uma grande variedade de tecnologias, como  React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server e etc.",
+            "secondLine": "Sou um profissional ávido por aprender novas tecnologias e desenvolver soluções que resolvam problemas e ajudem as pessoas no seu dia a dia."
+        },
+        "tabs": [
+            {"id": "portifolio", "title": "Portifólio"},
+            {"id": "tecnologies", "title": "Tecnologias"},
+            {"id": "languages", "title": "Idiomas"},
+            {"id": "schooling", "title": "Escolaridade"},
+            {"id": "experience", "title": "Experiência"}
+        ]
+    }],
+    "enUs": [
+
+    ]
+}

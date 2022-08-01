@@ -14,9 +14,32 @@ export type Scalars = {
   Float: number;
 };
 
+export type GithubData = {
+  __typename?: 'GithubData';
+  avatarUrl?: Maybe<Scalars['String']>;
+  bio?: Maybe<Scalars['String']>;
+  company?: Maybe<Scalars['String']>;
+  email?: Maybe<Scalars['String']>;
+  isHireable?: Maybe<Scalars['Boolean']>;
+  location?: Maybe<Scalars['String']>;
+  login?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  pinnedItems?: Maybe<Array<Maybe<RepositoryEdge>>>;
+};
+
+
+export type GithubDataAvatarUrlArgs = {
+  size?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type GithubDataPinnedItemsArgs = {
+  first?: InputMaybe<Scalars['Int']>;
+};
+
 export type Query = {
   __typename?: 'Query';
-  user?: Maybe<User>;
+  user?: Maybe<GithubData>;
 };
 
 
@@ -42,29 +65,6 @@ export type RepositoryEdge = {
 export type RepositoryNode = {
   __typename?: 'RepositoryNode';
   node?: Maybe<Repository>;
-};
-
-export type User = {
-  __typename?: 'User';
-  avatarUrl?: Maybe<Scalars['String']>;
-  bio?: Maybe<Scalars['String']>;
-  company?: Maybe<Scalars['String']>;
-  email?: Maybe<Scalars['String']>;
-  isHireable?: Maybe<Scalars['Boolean']>;
-  location?: Maybe<Scalars['String']>;
-  login?: Maybe<Scalars['String']>;
-  name?: Maybe<Scalars['String']>;
-  pinnedItems?: Maybe<Array<Maybe<RepositoryEdge>>>;
-};
-
-
-export type UserAvatarUrlArgs = {
-  size?: InputMaybe<Scalars['Int']>;
-};
-
-
-export type UserPinnedItemsArgs = {
-  first?: InputMaybe<Scalars['Int']>;
 };
 
 
@@ -137,6 +137,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
+  GithubData: ResolverTypeWrapper<GithubData>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
   Query: ResolverTypeWrapper<{}>;
@@ -144,12 +145,12 @@ export type ResolversTypes = {
   RepositoryEdge: ResolverTypeWrapper<RepositoryEdge>;
   RepositoryNode: ResolverTypeWrapper<RepositoryNode>;
   String: ResolverTypeWrapper<Scalars['String']>;
-  User: ResolverTypeWrapper<User>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
 export type ResolversParentTypes = {
   Boolean: Scalars['Boolean'];
+  GithubData: GithubData;
   ID: Scalars['ID'];
   Int: Scalars['Int'];
   Query: {};
@@ -157,11 +158,23 @@ export type ResolversParentTypes = {
   RepositoryEdge: RepositoryEdge;
   RepositoryNode: RepositoryNode;
   String: Scalars['String'];
-  User: User;
+};
+
+export type GithubDataResolvers<ContextType = any, ParentType extends ResolversParentTypes['GithubData'] = ResolversParentTypes['GithubData']> = {
+  avatarUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<GithubDataAvatarUrlArgs>>;
+  bio?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  company?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  isHireable?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  location?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  login?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  pinnedItems?: Resolver<Maybe<Array<Maybe<ResolversTypes['RepositoryEdge']>>>, ParentType, ContextType, Partial<GithubDataPinnedItemsArgs>>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
-  user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, RequireFields<QueryUserArgs, 'login'>>;
+  user?: Resolver<Maybe<ResolversTypes['GithubData']>, ParentType, ContextType, RequireFields<QueryUserArgs, 'login'>>;
 };
 
 export type RepositoryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Repository'] = ResolversParentTypes['Repository']> = {
@@ -184,24 +197,11 @@ export type RepositoryNodeResolvers<ContextType = any, ParentType extends Resolv
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
-export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
-  avatarUrl?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<UserAvatarUrlArgs>>;
-  bio?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  company?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  isHireable?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
-  location?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  login?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  name?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  pinnedItems?: Resolver<Maybe<Array<Maybe<ResolversTypes['RepositoryEdge']>>>, ParentType, ContextType, Partial<UserPinnedItemsArgs>>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
-};
-
 export type Resolvers<ContextType = any> = {
+  GithubData?: GithubDataResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
   Repository?: RepositoryResolvers<ContextType>;
   RepositoryEdge?: RepositoryEdgeResolvers<ContextType>;
   RepositoryNode?: RepositoryNodeResolvers<ContextType>;
-  User?: UserResolvers<ContextType>;
 };
 

@@ -12,8 +12,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next";
 import AboutMeLinks from "@/components/AboutMeLinks";
 import { AboutMe } from "@/components/AboutMe";
 import TabList from "@/components/TabList";
-import { useState } from "react";
-import Tab from "@/components/Tab";
 import { VscProject } from "react-icons/vsc";
 import { FaConnectdevelop } from "react-icons/fa";
 import {
@@ -22,14 +20,17 @@ import {
   MdOutlineWorkOutline,
 } from "react-icons/md";
 
-const Home = ({ user }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const [activeTab, setActiveTab] = useState("portfolio");
+const Home = ({
+  githubData,
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const githubUser = githubData.user;
 
   return (
     <>
       <main>
         <Navbar>
-          <Name name={user?.name} bio={user?.bio} />
+          <Name name={githubUser?.name} bio={githubUser?.bio} />
           <ThemeSwitch />
         </Navbar>
         <div className="flex mt-16 p-1 flex-col md:flex-row">
@@ -37,14 +38,17 @@ const Home = ({ user }: InferGetStaticPropsType<typeof getStaticProps>) => {
             <Card>
               <div className="flex flex-row">
                 <div className="flex items-center flex-row justify-center">
-                  <Avatar avatarUrl={user?.avatarUrl} alt="profile image" />
+                  <Avatar
+                    avatarUrl={githubUser?.avatarUrl}
+                    alt="profile image"
+                  />
                 </div>
                 <div className="py-4 px-2">
                   <AboutMeLinks
-                    login={user?.login}
-                    company={user?.company}
-                    location={user?.location}
-                    email={user?.email}
+                    login={githubUser?.login}
+                    company={githubUser?.company}
+                    location={githubUser?.location}
+                    email={githubUser?.email}
                   />
                 </div>
               </div>
@@ -56,42 +60,23 @@ const Home = ({ user }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <div className="flex-1 mt-2 px-0 md:px-2 md:mt-0 ">
             <TabList
               tabs={[
-                <Tab
-                  key={"portfolio"}
-                  id="portifolio"
-                  active={activeTab === "portfolio"}
-                  title="Portifólio"
-                  icon={<VscProject />}
-                  toggleTab={setActiveTab}
-                />,
-                <Tab
-                  id="tecnologies"
-                  active={activeTab === "tecnologies"}
-                  title="Tecnologias"
-                  icon={<FaConnectdevelop />}
-                  toggleTab={setActiveTab}
-                />,
-                <Tab
-                  id="languages"
-                  active={activeTab === "languages"}
-                  title="Idiomas"
-                  icon={<MdLanguage />}
-                  toggleTab={setActiveTab}
-                />,
-                <Tab
-                  id="experience"
-                  active={activeTab === "experience"}
-                  title="Experiência"
-                  icon={<MdOutlineWorkOutline />}
-                  toggleTab={setActiveTab}
-                />,
-                <Tab
-                  id="schooling"
-                  active={activeTab === "schooling"}
-                  title="Escolaridade"
-                  icon={<MdOutlineSchool />}
-                  toggleTab={setActiveTab}
-                />,
+                { id: "portfolio", title: "Portfolio", icon: <VscProject /> },
+                {
+                  id: "tecnologies",
+                  title: "Tecnologias",
+                  icon: <FaConnectdevelop />,
+                },
+                { id: "languages", title: "Idiomas", icon: <MdLanguage /> },
+                {
+                  id: "experience",
+                  title: "Experiência",
+                  icon: <MdOutlineWorkOutline />,
+                },
+                {
+                  id: "schooling",
+                  title: "Escolaridade",
+                  icon: <MdOutlineSchool />,
+                },
               ]}
             />
 
@@ -107,13 +92,19 @@ const Home = ({ user }: InferGetStaticPropsType<typeof getStaticProps>) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<GithubUserDataQuery> = async () => {
+export const getStaticProps: GetStaticProps<{
+  githubData: GithubUserDataQuery;
+  data: any;
+}> = async () => {
   const { data } = await client.query<GithubUserDataQuery>({
     query: GithubUserDataDocument,
   });
 
   return {
-    props: { user: data.user },
+    props: {
+      githubData: data,
+      data: {},
+    },
   };
 };
 

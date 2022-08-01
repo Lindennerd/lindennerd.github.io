@@ -1,5 +1,5 @@
 const typeDefs = /* GraphQL */ `
-  type User {
+  type GithubData {
     avatarUrl(size: Int): String
     bio: String
     company: String
@@ -29,11 +29,8 @@ const typeDefs = /* GraphQL */ `
   }
 
   type Query {
-    user(login: String!): User
+    user(login: String!): GithubData
   }
 `;
 
 export default typeDefs;
-/*  query GithubUserData($login: String!) {
-    user(login: $login) : User
-  } */

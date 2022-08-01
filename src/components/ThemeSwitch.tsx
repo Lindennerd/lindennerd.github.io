@@ -1,5 +1,6 @@
 import { MdLightMode, MdNightlight } from "react-icons/md";
 import { useTheme } from "next-themes";
+import { useEffect } from "react";
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme();
