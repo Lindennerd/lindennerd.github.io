@@ -32,15 +32,15 @@ const Home = ({
     // TODO improve this
     switch (icon) {
       case "FaConnectdevelop":
-        return <FaConnectdevelop />;
+        return <FaConnectdevelop className="text-xl" />;
       case "VscProject":
-        return <VscProject />;
+        return <VscProject className="text-xl" />;
       case "MdOutlineWorkOutline":
-        return <MdOutlineSchool />;
+        return <MdOutlineSchool className="text-xl" />;
       case "MdOutlineSchool":
-        return <MdOutlineWorkOutline />;
+        return <MdOutlineWorkOutline className="text-xl" />;
       case "MdLanguage":
-        return <MdLanguage />;
+        return <MdLanguage className="text-xl" />;
       default:
         return <></>;
     }

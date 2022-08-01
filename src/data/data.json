@@ -22,8 +22,8 @@
   },
   "enUs": {
     "presentation": {
-      "firstLine": "teste em ingles",
-      "secondLine": "Outro Teste em ingles"
+      "firstLine": "When I was 15 years old, i've started to learn how to develop and immediatelly fell in love with it. Today, I have more than 10 years of experience working professionally in this area and had the opportunity to utilize a vast variety of tecnologies, like React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server and etc.",
+      "secondLine": "I'm a natural self-learner, eager to explore new tecnologies and put this knowledge to use, solving problems and help clients to improve his day-to-day lifes"
     },
     "tabs": [
       { "id": "portifolio", "title": "Portifolio", "icon": "VscProject" },
