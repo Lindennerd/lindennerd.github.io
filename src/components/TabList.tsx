@@ -8,13 +8,11 @@ interface ITabProps {
 }
 
 export default function TabList({ tabs }: { tabs: ITabProps[] | undefined }) {
-  if (!tabs) return <></>;
-
-  const [activeTab, setActiveTab] = React.useState(tabs[0].id);
+  const [activeTab, setActiveTab] = React.useState(!tabs ? null : tabs[0].id);
 
   return (
     <ul className="flex justify-between px-8 bg-white shadow-md dark:bg-gray-600 p-1 rounded-md">
-      {tabs.map((tab) => {
+      {tabs?.map((tab) => {
         return (
           <div key={tab.id}>
             <Tab
