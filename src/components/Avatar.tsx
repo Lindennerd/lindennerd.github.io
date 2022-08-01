@@ -8,13 +8,13 @@ export default function Avatar({
   alt: string;
 }) {
   return (
-    <div className="">
+    <div>
       <Image
         src={avatarUrl || ""}
         alt={alt}
-        height={150}
-        width={150}
-        className="rounded-full shadow-lg"
+        height={200}
+        width={200}
+        className="rounded-full"
       />
     </div>
   );

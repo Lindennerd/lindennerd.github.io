@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tab } from "./Tab";
 
 interface ITabProps {
@@ -19,7 +19,7 @@ export function TabList({
   tabs: ITabProps[] | undefined;
   tabsContent: ITabsContent[] | undefined;
 }) {
-  const [activeTab, setActiveTab] = React.useState(!tabs ? null : tabs[0].id);
+  const [activeTab, setActiveTab] = useState(!tabs ? null : tabs[0].id);
 
   return (
     <>
