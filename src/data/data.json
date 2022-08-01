@@ -33,7 +33,7 @@
         "icon": "FaConnectdevelop"
       },
       { "id": "languages", "title": "Languages", "icon": "MdLanguage" },
-      { "id": "schooling", "title": "Schoolarship", "icon": "MdOutlineSchool" },
+      { "id": "schooling", "title": "Scholarship", "icon": "MdOutlineSchool" },
       {
         "id": "experience",
         "title": "Work Experience",

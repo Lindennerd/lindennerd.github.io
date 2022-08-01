@@ -1,4 +1,4 @@
-export default function Tab({
+export function Tab({
   id,
   title,
   icon,
@@ -16,7 +16,9 @@ export default function Tab({
       onClick={() => {
         toggleTab(id);
       }}
-      className={`tab-item ${active ? "active" : ""}`}
+      className={`flex justify-between items-center rounded-md p-2 cursor-pointer hover:bg-purple-900 dark:hover:bg-purple-700 transition-colors ${
+        active ? "bg-purple-900 dark:bg-purple-700" : ""
+      }`}
     >
       {icon}
       <span className="md:block hidden ml-2">{title}</span>

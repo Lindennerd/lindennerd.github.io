@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-    .tab-item {
-        @apply flex justify-between items-center rounded-md p-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors
-    }
-
-    .active {
-        @apply bg-gray-200 dark:bg-gray-700
-    }
-}

@@ -1,26 +1,31 @@
+import { AboutMe, AboutMeLinks } from "@/components/About";
 import Avatar from "@/components/Avatar";
+import Card from "@/components/Card";
 import Name from "@/components/Name";
 import Navbar from "@/components/Navbar";
-import Card from "@/components/Card";
-import ThemeSwitch from "@/components/ThemeSwitch";
+import { LanguageSwitch, ThemeSwitch } from "@/components/Switches";
+import { TabList } from "@/components/Tabs";
+import {
+  Languages,
+  Portifolio,
+  Scholarship,
+  Tecnologies,
+  WorkExperience,
+} from "@/components/Tabs/TabContent";
+import { useInternationalization } from "@/context/InternationalizationContext";
 import { client } from "@/graphql";
 import {
   GithubUserDataDocument,
   GithubUserDataQuery,
 } from "@/graphql/graphql-operations";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
-import AboutMeLinks from "@/components/AboutMeLinks";
-import { AboutMe } from "@/components/AboutMe";
-import TabList from "@/components/TabList";
-import { VscProject } from "react-icons/vsc";
 import { FaConnectdevelop } from "react-icons/fa";
 import {
   MdLanguage,
   MdOutlineSchool,
   MdOutlineWorkOutline,
 } from "react-icons/md";
-import { useInternationalization } from "@/context/InternationalizationContext";
-import LanguageSwitch from "@/components/LanguageSwitch";
+import { VscProject } from "react-icons/vsc";
 
 const Home = ({
   githubData,
@@ -90,6 +95,28 @@ const Home = ({
                   icon: getIcon(tab.icon),
                 };
               })}
+              tabsContent={[
+                {
+                  id: "portifolio",
+                  component: <Portifolio />,
+                },
+                {
+                  id: "tecnologies",
+                  component: <Tecnologies />,
+                },
+                {
+                  id: "languages",
+                  component: <Languages />,
+                },
+                {
+                  id: "schooling",
+                  component: <Scholarship />,
+                },
+                {
+                  id: "experience",
+                  component: <WorkExperience />,
+                },
+              ]}
             />
 
             {/* {activeTab === 0 && <div>Portifolio</div>}

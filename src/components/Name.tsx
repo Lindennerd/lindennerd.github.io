@@ -8,7 +8,7 @@ export default function Name({
   return (
     <div className="p-2">
       <div className="text-xl font-bold">{name}</div>
-      <div className="font-mono text-slate-600 dark:text-slate-200 hidden md:block">
+      <div className="font-mono text-white dark:text-slate-200 hidden md:block">
         {bio}
       </div>
     </div>

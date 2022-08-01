@@ -7,7 +7,7 @@ import {
   HiOutlineOfficeBuilding,
 } from "react-icons/hi";
 
-export default function AboutMeLinks({
+export function AboutMeLinks({
   login,
   company,
   location,

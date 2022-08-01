@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function LanguageSwitch() {
+export function LanguageSwitch() {
   const { locale, asPath } = useRouter();
 
   return (
