@@ -1,18 +1,44 @@
 {
-    "ptBr": [{
-        "presentation": {
-            "firstLine": "Comecei a desenvolver aos 15 anos de idade e imediatamente me apaixonei  pela atividade. Hoje, atuo a mais de 10 anos na área, e tive a  oportunidade de utilizar uma grande variedade de tecnologias, como  React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server e etc.",
-            "secondLine": "Sou um profissional ávido por aprender novas tecnologias e desenvolver soluções que resolvam problemas e ajudem as pessoas no seu dia a dia."
-        },
-        "tabs": [
-            {"id": "portifolio", "title": "Portifólio"},
-            {"id": "tecnologies", "title": "Tecnologias"},
-            {"id": "languages", "title": "Idiomas"},
-            {"id": "schooling", "title": "Escolaridade"},
-            {"id": "experience", "title": "Experiência"}
-        ]
-    }],
-    "enUs": [
-
+  "ptBr": {
+    "presentation": {
+      "firstLine": "Comecei a desenvolver aos 15 anos de idade e imediatamente me apaixonei  pela atividade. Hoje, atuo a mais de 10 anos na área, e tive a  oportunidade de utilizar uma grande variedade de tecnologias, como  React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server e etc.",
+      "secondLine": "Sou um profissional ávido por aprender novas tecnologias e desenvolver soluções que resolvam problemas e ajudem as pessoas no seu dia a dia."
+    },
+    "tabs": [
+      { "id": "portifolio", "title": "Portifólio", "icon": "VscProject" },
+      {
+        "id": "tecnologies",
+        "title": "Tecnologias",
+        "icon": "FaConnectdevelop"
+      },
+      { "id": "languages", "title": "Idiomas", "icon": "MdLanguage" },
+      { "id": "schooling", "title": "Escolaridade", "icon": "MdOutlineSchool" },
+      {
+        "id": "experience",
+        "title": "Experiência",
+        "icon": "MdOutlineWorkOutline"
+      }
     ]
+  },
+  "enUs": {
+    "presentation": {
+      "firstLine": "teste em ingles",
+      "secondLine": "Outro Teste em ingles"
+    },
+    "tabs": [
+      { "id": "portifolio", "title": "Portifolio", "icon": "VscProject" },
+      {
+        "id": "tecnologies",
+        "title": "Tecnologies",
+        "icon": "FaConnectdevelop"
+      },
+      { "id": "languages", "title": "Languages", "icon": "MdLanguage" },
+      { "id": "schooling", "title": "Schoolarship", "icon": "MdOutlineSchool" },
+      {
+        "id": "experience",
+        "title": "Work Experience",
+        "icon": "MdOutlineWorkOutline"
+      }
+    ]
+  }
 }

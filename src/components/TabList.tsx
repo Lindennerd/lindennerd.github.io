@@ -7,7 +7,9 @@ interface ITabProps {
   icon: React.ReactElement;
 }
 
-export default function TabList({ tabs }: { tabs: ITabProps[] }) {
+export default function TabList({ tabs }: { tabs: ITabProps[] | undefined }) {
+  if (!tabs) return <></>;
+
   const [activeTab, setActiveTab] = React.useState(tabs[0].id);
 
   return (

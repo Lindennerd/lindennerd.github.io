@@ -19,19 +19,43 @@ import {
   MdOutlineSchool,
   MdOutlineWorkOutline,
 } from "react-icons/md";
+import { useInternationalization } from "@/context/InternationalizationContext";
+import LanguageSwitch from "@/components/LanguageSwitch";
 
 const Home = ({
   githubData,
-  data,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const githubUser = githubData.user;
+  const internationalization = useInternationalization();
+
+  function getIcon(icon: string) {
+    // TODO improve this
+    switch (icon) {
+      case "FaConnectdevelop":
+        return <FaConnectdevelop />;
+      case "VscProject":
+        return <VscProject />;
+      case "MdOutlineWorkOutline":
+        return <MdOutlineSchool />;
+      case "MdOutlineSchool":
+        return <MdOutlineWorkOutline />;
+      case "MdLanguage":
+        return <MdLanguage />;
+      default:
+        return <></>;
+    }
+  }
 
   return (
     <>
       <main>
         <Navbar>
           <Name name={githubUser?.name} bio={githubUser?.bio} />
-          <ThemeSwitch />
+          <div className="flex justify-end items-center">
+            <ThemeSwitch />
+            <div className="p-2"></div>
+            <LanguageSwitch />
+          </div>
         </Navbar>
         <div className="flex mt-16 p-1 flex-col md:flex-row">
           <div className="md:w-[30%] w-full">
@@ -59,25 +83,13 @@ const Home = ({
           </div>
           <div className="flex-1 mt-2 px-0 md:px-2 md:mt-0 ">
             <TabList
-              tabs={[
-                { id: "portfolio", title: "Portfolio", icon: <VscProject /> },
-                {
-                  id: "tecnologies",
-                  title: "Tecnologias",
-                  icon: <FaConnectdevelop />,
-                },
-                { id: "languages", title: "Idiomas", icon: <MdLanguage /> },
-                {
-                  id: "experience",
-                  title: "Experiência",
-                  icon: <MdOutlineWorkOutline />,
-                },
-                {
-                  id: "schooling",
-                  title: "Escolaridade",
-                  icon: <MdOutlineSchool />,
-                },
-              ]}
+              tabs={internationalization?.appData?.tabs.map((tab) => {
+                return {
+                  id: tab.id,
+                  title: tab.title,
+                  icon: getIcon(tab.icon),
+                };
+              })}
             />
 
             {/* {activeTab === 0 && <div>Portifolio</div>}
@@ -94,7 +106,6 @@ const Home = ({
 
 export const getStaticProps: GetStaticProps<{
   githubData: GithubUserDataQuery;
-  data: any;
 }> = async () => {
   const { data } = await client.query<GithubUserDataQuery>({
     query: GithubUserDataDocument,
@@ -103,7 +114,6 @@ export const getStaticProps: GetStaticProps<{
   return {
     props: {
       githubData: data,
-      data: {},
     },
   };
 };
