@@ -35,15 +35,17 @@ export function Portifolio({ repositories }: { repositories: Repository[] }) {
                     {dateFormatter(repository.updatedAt)}
                   </span>
                 </div>
-                <Link href={repository.homepageUrl ?? ""} target="_blank">
-                  <a
-                    target="_blank"
-                    className="p-1 rounded-full bg-purple-600 
+                {repository.homepageUrl && (
+                  <Link href={repository.homepageUrl ?? ""} target="_blank">
+                    <a
+                      target="_blank"
+                      className="p-1 rounded-full bg-purple-600 
                   shadow-md dark:bg-gray-800 text-white hover:bg-purple-700 dark:hover:bg-gray-700 transition-all"
-                  >
-                    <BsLink45Deg className="text-xl" />
-                  </a>
-                </Link>
+                    >
+                      <BsLink45Deg className="text-xl" />
+                    </a>
+                  </Link>
+                )}
               </div>
             </Card>
           </div>

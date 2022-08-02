@@ -18,7 +18,97 @@
         "title": "Experiência",
         "icon": "MdOutlineWorkOutline"
       }
-    ]
+    ],
+    "tecnologies": [
+      {
+        "id": "react",
+        "title": "React",
+        "icon": "FaReact",
+        "description": "React é uma biblioteca JavaScript que permite a criação de interfaces de usuário através de componentes reutilizáveis."
+      },
+      {
+        "id": "typescript",
+        "title": "TypeScript",
+        "icon": "FaTypeScript",
+        "description": "TypeScript é uma linguagem de programação de tipagem estruturada, que permite ao desenvolvedor escrever código mais limpo e legítimo."
+      },
+      {
+        "id": "graphql",
+        "title": "GraphQL",
+        "icon": "FaGraphQL",
+        "description": "GraphQL é uma linguagem de consulta que permite ao desenvolvedor escrever código mais limpo e legítimo."
+      },
+      {
+        "id": "nextjs",
+        "title": "Next.js",
+        "icon": "FaNextJs",
+        "description": "Next.js é uma biblioteca JavaScript que permite a criação de interfaces de usuário através de componentes reutilizáveis."
+      },
+      {
+        "id": "nodejs",
+        "title": "Node.js",
+        "icon": "FaNodeJs",
+        "description": "Node.js é uma plataforma JavaScript de código aberto, utilizada para criar aplicações web e servidores."
+      },
+      {
+        "id": "express",
+        "title": "Express",
+        "icon": "FaExpress",
+        "description": "Express é uma biblioteca JavaScript que permite a criação de interfaces de usuário através de componentes reutilizáveis."
+      },
+      {
+        "id": "mongodb",
+        "title": "MongoDB",
+        "icon": "FaMongodb",
+        "description": "MongoDB é uma base de dados NoSQL, utilizada para armazenar dados em formato JSON."
+      },
+      {
+        "id": "docker",
+        "title": "Docker",
+        "icon": "FaDocker",
+        "description": "Docker é um ambiente de virtualização de aplicações que permite ao desenvolvedor escrever código mais limpo e legítimo."
+      },
+      {
+        "id": "netcore",
+        "title": ".Net Core",
+        "icon": "FaDotNet",
+        "description": ".Net Core é uma plataforma de desenvolvimento de aplicações web e servidores que utiliza o framework .NET."
+      },
+      {
+        "id": "sqlserver",
+        "title": "SQL Server",
+        "icon": "FaSqlServer",
+        "description": "SQL Server é uma base de dados relacional que permite ao desenvolvedor escrever código mais limpo e legítimo."
+      },
+      {
+        "id": "nextjs",
+        "title": "Next.js",
+        "icon": "FaNextJs",
+        "description": "Next.js é uma biblioteca JavaScript que permite a criação de interfaces de usuário através de componentes reutilizáveis."
+      },
+      {
+        "id": "tailwindcss",
+        "title": "Tailwind CSS",
+        "icon": "FaTailwindcss",
+        "description": "Tailwind CSS é uma biblioteca de estilos CSS que permite ao desenvolvedor escrever código mais limpo e legítimo."
+      }
+    ],
+    "languages": [
+      {
+        "id": "pt-br",
+        "title": "Português",
+        "icon": "FaLanguage",
+        "description": "Português é uma língua de origem europeia, que é a principal língua oficial do Brasil."
+      },
+      {
+        "id": "en-us",
+        "title": "Inglês",
+        "icon": "FaLanguage",
+        "description": "Inglês é uma língua de origem europeia, que é a principal língua oficial do Brasil."
+      }
+    ],
+    "schooling": [],
+    "experience": []
   },
   "enUs": {
     "presentation": {
@@ -39,6 +129,90 @@
         "title": "Experience",
         "icon": "MdOutlineWorkOutline"
       }
-    ]
+    ],
+    "tecnologies": [
+      {
+        "id": "react",
+        "title": "React",
+        "icon": "FaReact",
+        "description": "React is a JavaScript library that allows you to create user interfaces through reusable components."
+      },
+      {
+        "id": "typescript",
+        "title": "TypeScript",
+        "icon": "FaTypeScript",
+        "description": "TypeScript is a programming language that adds type-checking to JavaScript."
+      },
+      {
+        "id": "graphql",
+        "title": "GraphQL",
+        "icon": "FaGraphQL",
+        "description": "GraphQL is a query language that allows you to write cleaner, more legible code."
+      },
+      {
+        "id": "nextjs",
+        "title": "Next.js",
+        "icon": "FaNextJs",
+        "description": "Next.js is a JavaScript library that allows you to create user interfaces through reusable components."
+      },
+      {
+        "id": "nodejs",
+        "title": "Node.js",
+        "icon": "FaNodeJs",
+        "description": "Node.js is a JavaScript platform that runs JavaScript in a server environment."
+      },
+      {
+        "id": "express",
+        "title": "Express",
+        "icon": "FaExpress",
+        "description": "Express is a JavaScript web framework that provides a robust set of features for Node.js."
+      },
+      {
+        "id": "mongodb",
+        "title": "MongoDB",
+        "icon": "FaMongodb",
+        "description": "MongoDB is a NoSQL database that stores data in JSON format."
+      },
+      {
+        "id": "docker",
+        "title": "Docker",
+        "icon": "FaDocker",
+        "description": "Docker is an environment for virtualizing applications that allows you to write cleaner, more legible code."
+      },
+      {
+        "id": "netcore",
+        "title": ".Net Core",
+        "icon": "FaDotNet",
+        "description": ".Net Core is a platform for developing web applications and servers that uses the framework .NET."
+      },
+      {
+        "id": "sqlserver",
+        "title": "SQL Server",
+        "icon": "FaSqlServer",
+        "description": "SQL Server is a relational database that allows you to write cleaner, more legible code."
+      },
+      {
+        "id": "tailwindcss",
+        "title": "Tailwind CSS",
+        "icon": "FaTailwindcss",
+        "description": "Tailwind CSS is a CSS library that allows you to write cleaner, more legible code."
+      }
+    ],
+    "languages": [
+      {
+        "id": "pt-br",
+        "title": "Portuguese",
+        "icon": "FaLanguage",
+        "description": "Portuguese is a language of origin europe, that is the main language of Brazil."
+      },
+      {
+        "id": "en-us",
+        "title": "English",
+        "icon": "FaLanguage",
+        "description": "English is a language of origin europe, that is the main language of Brazil."
+      }
+    ],
+    "schooling": [],
+    "experience": []
   }
 }
