@@ -1,11 +1,9 @@
 import Card from "@/components/Card";
-import { Maybe, Repository } from "@/graphql/graphql-operations";
+import { Repository } from "@/graphql/graphql-operations";
 import Link from "next/link";
 import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { BsLink45Deg } from "react-icons/bs";
 import { MdOutlineUpdate } from "react-icons/md";
-import moment from "moment";
-import { useRouter } from "next/router";
 import useDateFormatter from "@/hooks/useDateFormatter";
 
 export function Portifolio({ repositories }: { repositories: Repository[] }) {
