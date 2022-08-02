@@ -19,7 +19,7 @@ export function Portifolio({ repositories }: { repositories: Repository[] }) {
               <CardTitle
                 icon={<RiGitRepositoryCommitsLine />}
                 title={repository.name?.toString() ?? ""}
-                url={repository.homepageUrl ?? ""}
+                url={repository.url ?? ""}
               />
               <div className="px-2 mt-2 border-l-2 dark:text-white">
                 {repository.description}
