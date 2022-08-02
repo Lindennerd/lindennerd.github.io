@@ -23,7 +23,7 @@ export function TabList({
 
   return (
     <>
-      <ul className="flex justify-between px-8 bg-purple-700 shadow-md dark:bg-purple-900 text-white p-1 rounded-md">
+      <ul className="flex justify-between px-8 bg-purple-600 shadow-md dark:bg-purple-900 text-white p-1 rounded-md">
         {tabs?.map((tab) => {
           return (
             <div key={tab.id}>

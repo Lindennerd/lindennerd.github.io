@@ -65,14 +65,14 @@ const Home = ({
         <div className="flex mt-16 p-1 flex-col md:flex-row">
           <div className="md:w-[30%] w-full">
             <Card>
-              <div className="flex flex-row p-2 rounded-lg bg-white dark:bg-gray-800 shadow-lg ">
+              <div className="flex flex-row p-2 rounded-lg bg-purple-700 dark:bg-gray-800 shadow-lg ">
                 <div className="flex items-center justify-center w-[50%]">
                   <Avatar
                     avatarUrl={githubUser?.avatarUrl}
                     alt="profile image"
                   />
                 </div>
-                <div className="py-4 px-2 text-black dark:text-white">
+                <div className="py-4 px-2 text-white">
                   <AboutMeLinks
                     login={githubUser?.login}
                     company={githubUser?.company}
