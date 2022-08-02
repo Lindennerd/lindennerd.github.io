@@ -6,14 +6,10 @@ import { BsLink45Deg } from "react-icons/bs";
 import { MdOutlineUpdate } from "react-icons/md";
 import moment from "moment";
 import { useRouter } from "next/router";
+import useDateFormatter from "@/hooks/useDateFormatter";
 
 export function Portifolio({ repositories }: { repositories: Repository[] }) {
-  const { locale } = useRouter();
-
-  function formatDate(date: Maybe<string> | undefined) {
-    const format = locale === "pt-Br" ? "DD/MM/YYYY" : "MM/DD/YYYY";
-    return moment(date).format(format);
-  }
+  const dateFormatter = useDateFormatter();
 
   return (
     <div className="flex justify-between flex-wrap">
@@ -38,7 +34,7 @@ export function Portifolio({ repositories }: { repositories: Repository[] }) {
                 <div className="flex items-center">
                   <MdOutlineUpdate className="text-xl" />
                   <span className="ml-2">
-                    {formatDate(repository.updatedAt)}
+                    {dateFormatter(repository.updatedAt)}
                   </span>
                 </div>
                 <Link href={repository.homepageUrl ?? ""} target="_blank">
