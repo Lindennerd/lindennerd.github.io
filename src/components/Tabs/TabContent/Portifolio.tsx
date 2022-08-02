@@ -5,10 +5,14 @@ import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { BsLink45Deg } from "react-icons/bs";
 import { MdOutlineUpdate } from "react-icons/md";
 import moment from "moment";
+import { useRouter } from "next/router";
 
 export function Portifolio({ repositories }: { repositories: Repository[] }) {
+  const { locale } = useRouter();
+
   function formatDate(date: Maybe<string> | undefined) {
-    return moment(date).format("MM/DD/YYYY");
+    const format = locale === "pt-Br" ? "DD/MM/YYYY" : "MM/DD/YYYY";
+    return moment(date).format(format);
   }
 
   return (
