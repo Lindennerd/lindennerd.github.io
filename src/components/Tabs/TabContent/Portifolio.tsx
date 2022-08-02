@@ -5,6 +5,7 @@ import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import { BsLink45Deg } from "react-icons/bs";
 import { MdOutlineUpdate } from "react-icons/md";
 import useDateFormatter from "@/hooks/useDateFormatter";
+import CardTitle from "@/components/CardTitle";
 
 export function Portifolio({ repositories }: { repositories: Repository[] }) {
   const dateFormatter = useDateFormatter();
@@ -15,16 +16,11 @@ export function Portifolio({ repositories }: { repositories: Repository[] }) {
         return (
           <div className="mt-2 mr-2 mb-2 w-full md:w-[30%]" key={repository.id}>
             <Card>
-              <div
-                className="flex items-center px-2 rounded-md bg-purple-600 shadow-md dark:bg-gray-800 
-              text-white hover:bg-purple-700 dark:hover:bg-gray-700 transition-all"
-              >
-                <RiGitRepositoryCommitsLine />
-                <div className="p-1"></div>
-                <Link href={repository.url ?? ""} target="_blank">
-                  <a target="_blank">{repository.name}</a>
-                </Link>
-              </div>
+              <CardTitle
+                icon={<RiGitRepositoryCommitsLine />}
+                title={repository.name?.toString() ?? ""}
+                url={repository.homepageUrl ?? ""}
+              />
               <div className="px-2 mt-2 border-l-2 dark:text-white">
                 {repository.description}
               </div>

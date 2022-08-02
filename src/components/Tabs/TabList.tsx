@@ -22,8 +22,6 @@ export function TabList({
   const [activeTab, setActiveTab] = useState<string | undefined>("");
 
   useEffect(() => {
-    console.log(tabs);
-    console.log(tabs && tabs[0].id);
     setActiveTab(tabs && tabs[0].id);
   }, [tabs]);
 

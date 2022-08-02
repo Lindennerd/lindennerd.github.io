@@ -1,27 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import i18nData from "@/data/data.json";
 import { useRouter } from "next/router";
-
-type Presentation = {
-  firstLine: string;
-  secondLine: string;
-};
-
-type Tab = {
-  id: string;
-  title: string;
-  icon: string;
-};
-
-type AppData = {
-  presentation: Presentation;
-  tabs: Tab[];
-};
-
-export interface InternationalizationData {
-  ptBr: AppData;
-  enUs: AppData;
-}
+import { AppData, InternationalizationData } from "@/types/appdata.types";
 
 interface InternationalizationContext {
   appData: AppData | null;

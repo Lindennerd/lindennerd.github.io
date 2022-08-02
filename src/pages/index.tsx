@@ -8,7 +8,6 @@ import { TabList } from "@/components/Tabs";
 import {
   Languages,
   Portifolio,
-  Scholarship,
   Tecnologies,
   WorkExperience,
 } from "@/components/Tabs/TabContent";
@@ -19,12 +18,9 @@ import {
   GithubUserDataQuery,
 } from "@/graphql/graphql-operations";
 import type { GetStaticProps, InferGetStaticPropsType } from "next";
+import React from "react";
 import { FaConnectdevelop } from "react-icons/fa";
-import {
-  MdLanguage,
-  MdOutlineSchool,
-  MdOutlineWorkOutline,
-} from "react-icons/md";
+import { MdLanguage, MdOutlineWorkOutline } from "react-icons/md";
 import { VscProject } from "react-icons/vsc";
 
 const Home = ({
@@ -42,8 +38,7 @@ const Home = ({
         return <VscProject className="text-xl" />;
       case "MdOutlineWorkOutline":
         return <MdOutlineWorkOutline className="text-xl" />;
-      case "MdOutlineSchool":
-        return <MdOutlineSchool className="text-xl" />;
+
       case "MdLanguage":
         return <MdLanguage className="text-xl" />;
       default:
@@ -111,19 +106,27 @@ const Home = ({
                 },
                 {
                   id: "tecnologies",
-                  component: <Tecnologies />,
+                  component: (
+                    <Tecnologies
+                      items={internationalization.appData?.tecnologies!}
+                    />
+                  ),
                 },
                 {
                   id: "languages",
-                  component: <Languages />,
-                },
-                {
-                  id: "schooling",
-                  component: <Scholarship />,
+                  component: (
+                    <Languages
+                      languages={internationalization.appData?.languages}
+                    />
+                  ),
                 },
                 {
                   id: "experience",
-                  component: <WorkExperience />,
+                  component: (
+                    <WorkExperience
+                      experiences={internationalization.appData?.experience}
+                    />
+                  ),
                 },
               ]}
             />
