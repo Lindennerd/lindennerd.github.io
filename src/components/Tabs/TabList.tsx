@@ -19,7 +19,13 @@ export function TabList({
   tabs: ITabProps[] | undefined;
   tabsContent: ITabsContent[] | undefined;
 }) {
-  const [activeTab, setActiveTab] = useState(!tabs ? null : tabs[0].id);
+  const [activeTab, setActiveTab] = useState<string | undefined>("");
+
+  useEffect(() => {
+    console.log(tabs);
+    console.log(tabs && tabs[0].id);
+    setActiveTab(tabs && tabs[0].id);
+  }, [tabs]);
 
   return (
     <>

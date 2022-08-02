@@ -17,7 +17,7 @@ export function Tab({
         toggleTab(id);
       }}
       className={`flex justify-between items-center rounded-md p-2 cursor-pointer hover:bg-purple-900 dark:hover:bg-purple-700 transition-colors ${
-        active ? "bg-purple-900 dark:bg-purple-700" : ""
+        active ? "bg-purple-800 dark:bg-purple-700" : ""
       }`}
     >
       {icon}

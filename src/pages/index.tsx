@@ -41,9 +41,9 @@ const Home = ({
       case "VscProject":
         return <VscProject className="text-xl" />;
       case "MdOutlineWorkOutline":
-        return <MdOutlineSchool className="text-xl" />;
-      case "MdOutlineSchool":
         return <MdOutlineWorkOutline className="text-xl" />;
+      case "MdOutlineSchool":
+        return <MdOutlineSchool className="text-xl" />;
       case "MdLanguage":
         return <MdLanguage className="text-xl" />;
       default:
@@ -98,7 +98,16 @@ const Home = ({
               tabsContent={[
                 {
                   id: "portifolio",
-                  component: <Portifolio />,
+                  component: (
+                    <Portifolio
+                      // TODO check why does codegen generate incorrect types for this
+                      // @ts-ignore
+                      repositories={githubData.user?.pinnedItems?.edges.map(
+                        // @ts-ignore
+                        (item) => item.node
+                      )}
+                    />
+                  ),
                 },
                 {
                   id: "tecnologies",
@@ -118,12 +127,6 @@ const Home = ({
                 },
               ]}
             />
-
-            {/* {activeTab === 0 && <div>Portifolio</div>}
-            {activeTab === 1 && <div>Tecnologias</div>}
-            {activeTab === 2 && <div>Idiomas</div>}
-            {activeTab === 3 && <div>Experiência</div>}
-            {activeTab === 4 && <div>Formação</div>} */}
           </div>
         </div>
       </main>

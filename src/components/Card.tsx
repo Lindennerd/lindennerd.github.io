@@ -1,6 +1,3 @@
-import Avatar from "./Avatar";
-import Name from "./Name";
-
 export default function PresentationCard({
   children,
 }: {
