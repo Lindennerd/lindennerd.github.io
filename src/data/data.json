@@ -104,18 +104,18 @@
       {
         "id": "1",
         "title": "Desenvolvedor Full Stack",
-        "company": "Sistemas e Tecnologia",
-        "description": "Desenvolvimento de aplicações web e servidores utilizando tecnologias como React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server e etc.",
+        "company": "KPMG Brasil",
+        "description": "Desenvolvimento de aplicações web e servidores utilizando tecnologias como .Net Core, SQL Server, MongoDB, Docker, Typescript e etc. Além de manutenção de code base React, NodeJs e Python.",
         "startDate": "2020-01",
-        "endDate": "2020-01"
+        "endDate": "o presente"
       },
       {
         "id": "2",
         "title": "Desenvolvedor Full Stack",
-        "company": "Sistemas e Tecnologia",
-        "description": "Desenvolvimento de aplicações web e servidores utilizando tecnologias como React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server e etc.",
-        "startDate": "2020-01",
-        "endDate": "2020-01"
+        "company": "Power Imaging",
+        "description": "Desenvolvimento de aplicações web e servidores utilizando tecnologias como .Net Core, SQL Server, MongoDB e Node Js.",
+        "startDate": "2010-01",
+        "endDate": "2019-12"
       }
     ]
   },
@@ -222,18 +222,18 @@
       {
         "id": "1",
         "title": "Full Stack Developer",
-        "company": "Sistemas e Tecnologia",
-        "description": "Development of web applications and servers using technologies like React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server and etc.",
+        "company": "KPMG Brazil",
+        "description": "Development of web applications and servers using technologies like .Net Core, SQL Server, MongoDB, Docker, Typescript e etc and also maintenance of code bases React, NodeJs and Python.",
         "startDate": "2020-01",
-        "endDate": "2020-01"
+        "endDate": "present"
       },
       {
         "id": "2",
         "title": "Full Stack Developer",
-        "company": "Sistemas e Tecnologia",
-        "description": "Development of web applications and servers using technologies like React, TypeScript, GraphQL, Next.js, Node.js, Express, MongoDB, Docker, .Net Core, SQL Server and etc.",
-        "startDate": "2020-01",
-        "endDate": "2020-01"
+        "company": "Power Imaging",
+        "description": "Development of web applications and servers using technologies like .Net Core, SQL Server, MongoDB and Node Js.",
+        "startDate": "2010-01",
+        "endDate": "2019-12"
       }
     ]
   }
