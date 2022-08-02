@@ -13,7 +13,7 @@ export function Languages({
       {languages &&
         languages.map((lang, index) => {
           return (
-            <div className="w-full mt-2 md:w-[25%] mr-2">
+            <div className="w-full mt-2 md:w-[25%] mr-2" key={index}>
               <Card>
                 <CardTitle icon={<FaLanguage />} title={lang.title} />
                 <div className="border-l-2 dark:text-white p-2">
