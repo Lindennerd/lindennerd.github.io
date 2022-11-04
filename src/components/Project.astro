@@ -1,0 +1,17 @@
+---
+
+const {name, description, image} = Astro.props;
+
+---
+
+<article class="p-2 flex flex-col gap-2 text-justify">
+    <header class="text-2xl">
+        <a href="" class="hover:border-b-4 border-cyan-600 py-1 transition-all">
+            {name}
+        </a>
+    </header>
+    <div>
+        {description}
+    </div>
+    <img src={image} alt={name} class="rounded-md w-72">
+</article>
